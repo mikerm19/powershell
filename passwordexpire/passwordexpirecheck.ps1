@@ -20,10 +20,10 @@ $emailsmtp = "smtp.office365.com"      # The SMTP server address to send from
 $emailport = 587                       # The SMTP server port
 
 ## E-Mail Subject Customization ##
-$subjectoneday = 'WARNING: YOUR MAG PASSWORD WILL EXPIRE IN 1 DAY!'     # Subject for 1 day left
-$subjectthreedays = 'Warning: Your MAG password will expire in 3 days!' # Subject for 3 days out
-$subjectfivedays = 'Notice: Your MAG password will expire in 5 days.'   # Subject for 5 days out
-$subjectoneweek = 'Notice: Your MAG password will expire in 1 week.'    # Subject for one week out
+$subjectoneday = 'WARNING: YOUR PASSWORD WILL EXPIRE IN 1 DAY!'     # Subject for 1 day left
+$subjectthreedays = 'Warning: Your password will expire in 3 days!' # Subject for 3 days out
+$subjectfivedays = 'Notice: Your password will expire in 5 days.'   # Subject for 5 days out
+$subjectoneweek = 'Notice: Your password will expire in 1 week.'    # Subject for one week out
 $subjectserviceacct = 'Service Account ($upn) Password Expiring'  # Subject for non-human accounts (to keep the subject the same for ticketing systems)
 ## End Setup ##
 
