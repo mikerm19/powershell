@@ -1,11 +1,11 @@
 ﻿## Basic setup ##
-$emaildefault = ""     # Where all the emails would go for non-human accounts, E.G. IT ticket system email
-$creduser = ""         # The user for the Office365 login credentials
+$emaildefault = ""                            # Where all the emails would go for non-human accounts, E.G. IT ticket system email
+$creduser = ""                                # The user for the Office365 login credentials
 $credfile = "C:\PasswordExpire\passwordsuser" # The encrypted password file generated with the partner script. See PasswordKeyGenerator.ps1 to generate a new key file if the user is changed.
 $expiredays = 180                             # How many days until the password expires
 
-#Set this to other special usernames you want to go force to the default email. Don't forget to keep this list updated!
-$emailspecial = "confaa@medadvgrp.com","confaab@medadvgrp.com","confell@medadvgrp.com","confels@medadvgrp.com","confflint@medadvgrp.com"
+#Set this to other special usernames you want to go force to the default email. Don't forget to keep this list updated! Comma separated
+$emailspecial = ""
 
 ## E-Mail Setup ##
 # With Office365, by default the From address must match the user you logged in with. Otherwise you have to give the login account permissions to the From account.
@@ -15,7 +15,7 @@ $emailspecial = "confaa@medadvgrp.com","confaab@medadvgrp.com","confell@medadvgr
 $emailbodyserviceacct = 'This password will expire in $timeleft.</b><br><br>Username: $serviceacct<br>Password Set Date: $lastchangedate<br>Password Expire Date: $expiredate'
 $emailbodyzacct = 'This is an automatically generated message. Do not reply.<br><br><b>This password will expire in $timeleft.</b><br><br><b>Please reset your password ASAP to avoid work interruptions.</b><br><br>Go to https://portal.office.com and log in with your Z account. Click on the gear icon in the upper right and select Password. Follow the prompts to change your password.<br><br><br>Username: $upn<br>Password Set Date: $lastchangedate<br>Password Expire Date: $expiredate'
 $emailbody = 'This is an automatically generated message. Do not reply.<br><br><b>Your MAG password will expire in $timeleft.</b><br><br><b>Please reset your password ASAP to avoid work interruptions.</b><br><br>If you are in East Lansing or Ann Arbor offices, simply press CTRL+ALT+DEL and click "Change a password"<br><br>If you are remote, go to https://portal.office.com, log in, click on the gear icon in the upper right and select Password. Then press CTRL+ALT+DEL and click "Change a password" to change your password on your laptop.<br><br>After changing your password, you may be prompted for your new password in Office, Outlook, Skype, SharePoint, and your phone if applicable. Be sure to check "Remember password" for your convenience.<br><br>If you have any questions or need any assistance, please contact us at <a href="mailto:itsupport@medadvgrp.com">itsupport@medadvgrp.com</a>.<br><br>Username: $emailto<br>Password Set Date: $lastchangedate<br>Password Expire Date: $expiredate'
-$emailfrom = "passwords@medadvgrp.com" # The From address for the email
+$emailfrom = ""                        # The From address for the email
 $emailsmtp = "smtp.office365.com"      # The SMTP server address to send from
 $emailport = 587                       # The SMTP server port
 
